@@ -104,3 +104,39 @@ http://m1.obb.im/Zme6sT9kw4KpU-Y-7wq2RpErqTM=/600x500/left/isuzu.co.uk/m/7c67e8/
     $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg", $img_settings);
     
 http://m1.obb.im/G6WHVA-0O8Y958TFb4uM06gGj2Y=/600x500/right/isuzu.co.uk/m/7c67e8/860.jpg
+
+
+### Width & Height Generation
+
+In it's simplest usage, just specify a desired width and height and an image will be served, cropped where necessary, to match the required dimensions.
+
+#### Ratio dependent generation
+
+Simply replace the pro-ratio dimension with a zero. For example:
+
+    $img_settings = [
+      "width"=>700,
+      "height"=>0,
+    ];
+    $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg", $img_settings);
+    
+Results in this image: http://m1.obb.im/tKqROt8jn_Sp-Bvm81IZOzLzRlU=/700x0/right/isuzu.co.uk/m/7c67e8/860.jpg
+
+For the inverse:
+
+    $img_settings = [
+      "width"=>0,
+      "height"=>400,
+    ];
+    $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg", $img_settings);
+    
+Gets this image: http://m1.obb.im/B6OnIQHxbuV_9zfNXva6Xvgsiqg=/0x400/right/isuzu.co.uk/m/7c67e8/860.jpg
+
+
+#### Original Size
+
+Finally, you can specify both width and height as zero to receive the original size back. Note that since this is the default for width and height you can just do this:
+
+    $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg");
+    
+That will give the following image: http://m1.obb.im/nuXfoLZ9umswOZvg7reqeg9lYTo=/0x0/smart/isuzu.co.uk/m/7c67e8/860.jpg
