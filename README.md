@@ -152,13 +152,27 @@ The following filters are available, documentation will be forthcoming as the mo
 
 The filter is passed into the url options as a string.
 
+### Brightness
+
+Alters the image brightness, with syntax:
+
+    brightness(%num)
+
+PHP Code to generate:
+
+    $img_settings = [
+      "filters"=>"brightness(60)"
+    ];
+    $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg", $img_settings);
+
+
 ####Watermarking
 
 Watermark filter allows an image overlay to be applied to the original image. This can also be used to add standard overlays to images, such as coming soon, or new bursts overlaid on product photography.
 
 The syntax for watermarks is as follows:
 
-    watermark(http://path/to/watermark.png,xoffset,yoffset,opacity)
+
     
 
 
