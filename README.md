@@ -140,3 +140,28 @@ Finally, you can specify both width and height as zero to receive the original s
     $url = $asset->url("isuzu.co.uk/m/7c67e8/860.jpg");
     
 That will give the following image: http://m1.obb.im/nuXfoLZ9umswOZvg7reqeg9lYTo=/0x0/smart/isuzu.co.uk/m/7c67e8/860.jpg
+
+### Image Metadata
+
+Docs coming Soon
+
+
+## Filters
+
+The following filters are available, documentation will be forthcoming as the modules are enabled.
+
+The filter is passed into the url options as a string.
+
+####Watermarking
+
+Watermark filter allows an image overlay to be applied to the original image. This can also be used to add standard overlays to images, such as coming soon, or new bursts overlaid on product photography.
+
+The syntax for watermarks is as follows:
+
+    watermark(http://path/to/watermark.png,xoffset,yoffset,opacity)
+    
+So using the Asset class in PHP we can do the following.
+
+
+
+

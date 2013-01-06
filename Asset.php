@@ -39,6 +39,7 @@ class Asset {
   }
   
   protected function command() {
+    if($this->meta) $command[]="meta";
     $command[] = $this->width . "x" . $this->height;
     $command[] = $this->mode;
     if($this->filters) $command[] = "filters:".$this->filters;
@@ -50,7 +51,6 @@ class Asset {
     $url = $this->protocol.$this->server;
     if($this->port) $url.=":$this->port";
     $url .= "/". $this->hash_key()."/";
-    if($this->meta) $url.="meta/";
     $url .= $this->command();
     return $url;
   }
