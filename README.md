@@ -47,5 +47,15 @@ Use the following code to get up and running.
 ### Served image example
 
 http://m1.obb.im/ViIPnXE3v-e8kJWaUYBpGmKIbGU=/600x500/smart/isuzu.co.uk/m/81e072/1200.jpg
+
+The full url component is made up of 5 main parts.
+
+* The media server, in the example case "http://m1.obb.im"
+* The security signature eg: `ViIPnXE3v-e8kJWaUYBpGmKIbGU=`
+* The requested width and height as passed into the options
+* The display mode, in this case the default mode is `smart`
+* The url of the original image
+
+
     
 
