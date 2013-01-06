@@ -160,7 +160,7 @@ The syntax for watermarks is as follows:
 
     watermark(http://path/to/watermark.png,xoffset,yoffset,opacity)
     
-So using the Asset class in PHP we can do the following.
+
 
 
 
