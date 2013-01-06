@@ -22,4 +22,30 @@ For simple out of the box usage you will need the following configuration items
 * A full url to an image you would like to serve.
 
 
+### Basic Example
+
+Use the following code to get up and running.
+
+    <?php
+    use OBB\Mediaserver\Asset;
+    
+    $server = [
+      "server"=>     "example.co.uk",
+      "server_key"=> "secretexample"
+    ];
+    
+    $options = [
+      "width"=>  300,
+      "height"=> 300
+    ];
+    
+    $asset = new Asset($server);
+    $url = $asset->url("http://path/to/image.jpg", $options);
+    // Example output:
+    // http://example.co.uk/4nB7OmYXS1Duobw_1bhp9QcJImw=/300x300/smart/http://path/to/image.jpg
+
+### Served image example
+
+http://m1.obb.im/ViIPnXE3v-e8kJWaUYBpGmKIbGU=/600x500/smart/isuzu.co.uk/m/81e072/1200.jpg
+    
 
