@@ -16,23 +16,23 @@ class Asset {
   public $mode        = "smart";
   public $filters     = false;
   
-  public function __construct($options = []) {
+  public function __construct($options = array()) {
     foreach($options as $option=>$value) $this->$option = $value;
   }
   
-  public function url($resource, $options = []) {
+  public function url($resource, $options = array()) {
     $this->resource = $resource;
     foreach($options as $option=>$value) $this->$option = $value;
     return $this->build();
   }
   
-  public function unsafe_url($resource, $options = []) {
+  public function unsafe_url($resource, $options = array()) {
     $this->url($resource, $options);
     $this->unsafe = true;
     return $this->build();
   }
   
-  public function meta($resource, $options = []) {
+  public function meta($resource, $options = array()) {
     $this->url($resource, $options);
     $this->meta = true;
     return $this->build();
